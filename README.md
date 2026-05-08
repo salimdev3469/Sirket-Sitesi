@@ -52,6 +52,7 @@ npm run dev
 ## Firebase Notes
 
 - `FIREBASE_PRIVATE_KEY` must include escaped newlines (`\\n`) in `.env.local`.
+- `FIREBASE_STORAGE_BUCKET` should be set to your Firebase Storage bucket name if it differs from the default (`PROJECT_ID.firebasestorage.app` on newer projects, `PROJECT_ID.appspot.com` on older projects).
 - Contact form submissions are written to Firestore collection defined by `FIREBASE_CONTACT_COLLECTION`.
 
 ## Render Deployment
@@ -62,6 +63,7 @@ npm run dev
   - `FIREBASE_PROJECT_ID`
   - `FIREBASE_CLIENT_EMAIL`
   - `FIREBASE_PRIVATE_KEY`
+  - `FIREBASE_STORAGE_BUCKET` (recommended)
   - `FIREBASE_CONTACT_COLLECTION` (optional)
   - `ADMIN_PASSWORD`
   - `ADMIN_SESSION_SECRET`

@@ -41,9 +41,31 @@ export function getContactCollectionName() {
 }
 
 export function getStorageBucketName() {
-  return process.env.FIREBASE_STORAGE_BUCKET || `${process.env.FIREBASE_PROJECT_ID}.appspot.com`;
+  const explicitBucket = process.env.FIREBASE_STORAGE_BUCKET?.trim();
+
+  if (explicitBucket) {
+    return explicitBucket;
+  }
+
+  const projectId = process.env.FIREBASE_PROJECT_ID;
+  return `${projectId}.firebasestorage.app`;
 }
 
-export function getStorageBucket() {
-  return getStorage(getFirebaseAdminApp()).bucket(getStorageBucketName());
+export function getStorageBucketCandidates() {
+  const explicitBucket = process.env.FIREBASE_STORAGE_BUCKET?.trim();
+  const projectId = process.env.FIREBASE_PROJECT_ID?.trim();
+
+  if (explicitBucket) {
+    return [explicitBucket];
+  }
+
+  if (!projectId) {
+    return [];
+  }
+
+  return [`${projectId}.firebasestorage.app`, `${projectId}.appspot.com`];
+}
+
+export function getStorageBucket(bucketName?: string) {
+  return getStorage(getFirebaseAdminApp()).bucket(bucketName || getStorageBucketName());
 }

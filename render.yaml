@@ -12,6 +12,8 @@ services:
         sync: false
       - key: FIREBASE_PRIVATE_KEY
         sync: false
+      - key: FIREBASE_STORAGE_BUCKET
+        sync: false
       - key: FIREBASE_CONTACT_COLLECTION
         value: contact_submissions
       - key: ADMIN_PASSWORD
