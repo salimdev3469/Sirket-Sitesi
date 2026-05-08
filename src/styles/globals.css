@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-text antialiased;
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-container px-4 md:px-6 lg:px-margin;
+  }
+
+  .section-spacer {
+    @apply py-16 lg:py-section;
+  }
+
+  .section-border {
+    @apply border-t border-border;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded border border-primary bg-primary px-6 py-3 text-label-md font-semibold text-white transition-colors hover:bg-primary-hover;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded border border-primary/35 bg-transparent px-6 py-3 text-label-md font-semibold text-muted transition-colors hover:bg-light;
+  }
+
+  .nav-link {
+    @apply border-b-2 border-transparent pb-1 text-label-md font-medium text-muted transition-colors hover:text-primary;
+  }
+
+  .nav-link-active {
+    @apply border-primary text-primary;
+  }
+
+  .card-shell {
+    @apply rounded border border-border bg-white;
+  }
+
+  .reveal-soft {
+    animation: reveal-soft 700ms ease-out both;
+  }
+
+  .reveal-soft-delay-1 {
+    animation: reveal-soft 700ms ease-out 120ms both;
+  }
+
+  .reveal-soft-delay-2 {
+    animation: reveal-soft 700ms ease-out 220ms both;
+  }
+
+  .reveal-soft-delay-3 {
+    animation: reveal-soft 700ms ease-out 320ms both;
+  }
+}
+
+@keyframes reveal-soft {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-soft,
+  .reveal-soft-delay-1,
+  .reveal-soft-delay-2,
+  .reveal-soft-delay-3 {
+    animation: none !important;
+  }
+}

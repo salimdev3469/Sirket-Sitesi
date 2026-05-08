@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AKA Yazılım - Precision in Software Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#4a5f82",
+                        "on-primary-fixed": "#021b3b",
+                        "outline-variant": "#c4c6cf",
+                        "on-tertiary-fixed": "#181c1e",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f9f9ff",
+                        "inverse-surface": "#293040",
+                        "on-surface": "#141b2b",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-tertiary-container": "#94989a",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#464747",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dce2f7",
+                        "tertiary-container": "#2c3032",
+                        "on-surface-variant": "#44474e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e1dfdf",
+                        "background": "#f9f9ff",
+                        "on-background": "#141b2b",
+                        "on-tertiary-fixed-variant": "#434749",
+                        "on-primary-fixed-variant": "#324769",
+                        "surface-variant": "#dce2f7",
+                        "surface-container-low": "#f1f3ff",
+                        "primary": "#011b3a",
+                        "surface-container-high": "#e1e8fd",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#8398be",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#e4e2e2",
+                        "surface": "#f9f9ff",
+                        "primary-fixed-dim": "#b2c7ef",
+                        "surface-container": "#e9edff",
+                        "tertiary": "#171b1d",
+                        "on-secondary-container": "#626263",
+                        "surface-dim": "#d3daef",
+                        "outline": "#74777f",
+                        "secondary": "#5e5e5e",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "inverse-primary": "#b2c7ef",
+                        "primary-container": "#1a3050",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "inverse-on-surface": "#edf0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "margin": "32px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "code": ["monospace"],
+                        "headline-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "code": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar -->
+<nav class="bg-surface fixed top-0 w-full z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center h-20 px-margin max-w-container-max mx-auto">
+<div class="flex items-center">
+<a class="text-headline-md font-headline-md font-bold text-primary" href="/">AKA Yazılım</a>
+</div>
+<div class="hidden md:flex space-x-margin">
+<!-- Home is inferred as active for Home page -->
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors py-2" href="#">Solutions</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors py-2" href="#">Services</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors py-2" href="#">Projects</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors py-2" href="#">Company</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors py-2" href="#">Careers</a>
+</div>
+<div class="hidden md:block">
+<a class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 rounded hover:bg-primary transition-colors" href="#">Get in Touch</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="py-section-padding px-margin max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="flex flex-col gap-stack-lg">
+<h1 class="font-headline-xl text-headline-xl text-primary">
+                Precision in Every Line of Code
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                We build structured, scalable, and highly reliable software solutions for modern enterprises. Experience the power of rigorous engineering designed for long-term stability and performance.
+            </p>
+<div class="flex gap-stack-md mt-stack-md">
+<a class="bg-primary-container text-on-primary font-label-md text-label-md px-8 py-4 rounded hover:bg-primary transition-colors inline-block text-center border border-primary-container" href="#">
+                    Get a Consultation
+                </a>
+<a class="bg-transparent text-secondary border border-outline font-label-md text-label-md px-8 py-4 rounded hover:bg-surface-container-low transition-colors inline-block text-center" href="#expertise">
+                    Explore Solutions
+                </a>
+</div>
+</div>
+<div class="relative w-full h-[400px] bg-surface-container-low border border-outline-variant flex items-center justify-center p-8">
+<img alt="AKA Yazılım Logo on dark background" class="w-full h-auto object-contain" data-alt="A highly professional and precise corporate logo for AKA Yazılım displayed against a deep navy blue background. The logo features stark, crisp geometric lines conveying absolute reliability and technical precision. The lighting is subtle, highlighting the structural modernism of the design, creating an atmosphere of corporate authority and trust fitting for an enterprise software engineering firm." src="https://lh3.googleusercontent.com/aida/ADBb0uhv8QkDOEXFZpczfPRj-VSPaiqPbhhsSGzBJqTAY-rbuo41r0d1r7WEEwg8UHq2YqcJB-nc6Fgi28qLhhvzCoz_uEVT402_4c1cxQR9jDNMK_d1gbYDVfu6HOEq7E_J9Q9Xwt_Ab_HTA0ccIrg0KShUnqw38IWoD05IV-z45XJ0cnENfk_C0tSuYOC3mt1o9-duEo6_OTvvoEJOUWKxbXtk1906cLqmEuBQPhyskDcZcTEDnlm7lIz19AH5Hf-Xqb9XGIfH1IeP"/>
+</div>
+</header>
+<!-- Expertise Section -->
+<section class="bg-surface-bright py-section-padding px-margin border-t border-outline-variant" id="expertise">
+<div class="max-w-container-max mx-auto">
+<div class="mb-stack-lg text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Expertise</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm max-w-2xl mx-auto">Structured engineering domains focused on enterprise-grade reliability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface border border-outline-variant p-margin hover:shadow-[0_4px_6px_-1px_rgba(26,48,80,0.05),0_2px_4px_-1px_rgba(26,48,80,0.03)] transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary flex items-center justify-center rounded mb-stack-md">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Software Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Custom application development utilizing robust architectures. We deliver clean, maintainable code optimized for high performance and strict security standards.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface border border-outline-variant p-margin hover:shadow-[0_4px_6px_-1px_rgba(26,48,80,0.05),0_2px_4px_-1px_rgba(26,48,80,0.03)] transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary flex items-center justify-center rounded mb-stack-md">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Digital Transformation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Systematic modernization of legacy infrastructure. We integrate fragmented data silos into cohesive, automated workflows designed for operational efficiency.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface border border-outline-variant p-margin hover:shadow-[0_4px_6px_-1px_rgba(26,48,80,0.05),0_2px_4px_-1px_rgba(26,48,80,0.03)] transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary flex items-center justify-center rounded mb-stack-md">
+<span class="material-symbols-outlined" data-icon="cloud">cloud</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Cloud Solutions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Scalable cloud architecture deployment and management. Ensuring 99.99% uptime through resilient, distributed systems and advanced containerization orchestration.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Asymmetric Layout) -->
+<section class="py-section-padding px-margin max-w-container-max mx-auto border-t border-outline-variant">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 h-[500px] bg-surface-container-lowest border border-outline-variant overflow-hidden">
+<img alt="Server room representing cloud infrastructure" class="w-full h-full object-cover grayscale" data-alt="A highly structured, professional photograph of a modern enterprise server room. Rows of massive server racks disappear into a precise, perfectly aligned vanishing point. The lighting is cool, technical, and high-contrast, dominated by deep blacks, crisp whites, and stark navy blue accents. The mood is serious, secure, and focused on absolute reliability, reflecting a high-end corporate IT infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBknCvtTeFs5Z553X-87f3Hc27mtMnHR-1r-9vAGk_WTq60anuL3JJ5U4T4alYMpdKGyEbGO3ATF-Vbgh1GT-UMbIMVdl--JGqetvjMrHqq5BklWFS_0j7VwMIpkbJPhvelJ_osX6NBqrlB9th_5qU_eSAhh3Hl-Amqf3v77D3ff9veWn_ohT_9wsRu_-DZHS-0e5XmHc0wKBemBcUKgbgqkjjtn6UI83v_4qFynpTJjWQosc-11q31abdA8WBWdeFNyYL_Q343avY"/>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-stack-md lg:pl-margin">
+<h2 class="font-headline-lg text-headline-lg text-primary">Engineered for Stability. Built for Scale.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    At AKA Yazılım, we view software engineering as a discipline of precision. Our methodology rejects shortcuts in favor of rigorous testing, strict architectural standards, and transparent processes. We partner with enterprises that require technology foundations strong enough to support decades of growth.
+                </p>
+<div class="grid grid-cols-2 gap-stack-md mt-stack-md pt-stack-md border-t border-outline-variant">
+<div>
+<div class="font-headline-lg text-headline-lg text-primary">99.9%</div>
+<div class="font-label-md text-label-md text-secondary uppercase tracking-wider mt-2">Uptime Guarantee</div>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary">ISO</div>
+<div class="font-label-md text-label-md text-secondary uppercase tracking-wider mt-2">27001 Certified</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Insights (Bento Grid) -->
+<section class="bg-surface-container-low py-section-padding px-margin border-t border-outline-variant">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-stack-lg border-b border-outline-variant pb-stack-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Latest Insights</h2>
+<a class="font-label-md text-label-md text-primary flex items-center hover:underline" href="#">
+                    View All Research <span class="material-symbols-outlined ml-2 text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter auto-rows-[250px]">
+<!-- Featured Article -->
+<div class="md:col-span-2 md:row-span-2 bg-surface border border-outline-variant p-margin flex flex-col justify-between hover:border-primary transition-colors group">
+<div>
+<div class="font-label-md text-label-md text-secondary mb-stack-sm">Whitepaper • Technical Architecture</div>
+<h3 class="font-headline-lg text-headline-lg text-primary group-hover:text-primary-container transition-colors">Microservices vs. Monolith: A Data-Driven Analysis of Enterprise Deployment Models in 2024</h3>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                        Evaluating structural integrity, deployment velocity, and operational overhead in large-scale systems.
+                    </div>
+</div>
+<!-- Smaller Article 1 -->
+<div class="md:col-span-2 bg-surface border border-outline-variant p-margin flex flex-col justify-between hover:border-primary transition-colors group">
+<div>
+<div class="font-label-md text-label-md text-secondary mb-stack-sm">Engineering Blog</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-primary-container transition-colors">Implementing Zero-Trust Security Protocols</h3>
+</div>
+<div class="flex items-center text-secondary">
+<span class="material-symbols-outlined mr-2 text-[16px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md">Oct 12, 2023</span>
+</div>
+</div>
+<!-- Smaller Article 2 -->
+<div class="md:col-span-1 bg-primary-container text-on-primary border border-primary-container p-margin flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-primary">Q3 Performance Benchmark Report</h3>
+</div>
+<div class="mt-4">
+<a class="inline-flex items-center font-label-md text-label-md hover:underline" href="#">Download PDF <span class="material-symbols-outlined ml-1 text-[16px]" data-icon="download">download</span></a>
+</div>
+</div>
+<!-- Smaller Article 3 -->
+<div class="md:col-span-1 bg-surface border border-outline-variant p-margin flex flex-col justify-between hover:border-primary transition-colors group">
+<div>
+<div class="font-label-md text-label-md text-secondary mb-stack-sm">Case Study</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-primary-container transition-colors">Logistics Automation</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-bright py-section-padding border-t border-outline-variant w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-gutter px-margin max-w-container-max mx-auto">
+<div class="lg:col-span-2 flex flex-col gap-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">AKA Yazılım</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Precision in Software Engineering. Building the foundations for enterprise technology.
+                </p>
+<div class="font-body-md text-body-md text-secondary mt-auto">
+                    © 2024 AKA Yazılım. All rights reserved. Precision in Software Engineering.
+                </div>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold mb-2">Legal</span>
+<a class="font-body-md text-body-md text-secondary hover:text-on-surface hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary hover:text-on-surface hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary hover:text-on-surface hover:underline transition-all" href="#">Cookie Policy</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold mb-2">Navigation</span>
+<a class="font-body-md text-body-md text-secondary hover:text-on-surface hover:underline transition-all" href="#">Sitemap</a>
+<a class="font-body-md text-body-md text-secondary hover:text-on-surface hover:underline transition-all" href="#">Security</a>
+</div>
+<div class="lg:col-span-2 flex flex-col gap-stack-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold mb-2">Office</span>
+<p class="font-body-md text-body-md text-secondary">
+                    Istanbul Technical University<br/>
+                    Teknokent, ARI 3 Building<br/>
+                    Maslak, Istanbul, Turkey
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
